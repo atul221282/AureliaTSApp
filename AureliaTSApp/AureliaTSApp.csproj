@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -24,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -105,6 +107,12 @@
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
     <Content Include="typings.json" />
+    <Content Include="dist\app.js.map" />
+    <Content Include="dist\blur-image.js.map" />
+    <Content Include="dist\child-router.js.map" />
+    <Content Include="dist\main.js.map" />
+    <Content Include="dist\users.js.map" />
+    <Content Include="dist\welcome.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -116,6 +124,17 @@
     <Content Include=".gitignore" />
     <Content Include="aurelia.protractor.js" />
     <Content Include="config.js" />
+    <Content Include="dist\app.html" />
+    <Content Include="dist\app.js" />
+    <Content Include="dist\blur-image.js" />
+    <Content Include="dist\child-router.html" />
+    <Content Include="dist\child-router.js" />
+    <Content Include="dist\main.js" />
+    <Content Include="dist\nav-bar.html" />
+    <Content Include="dist\users.html" />
+    <Content Include="dist\users.js" />
+    <Content Include="dist\welcome.html" />
+    <Content Include="dist\welcome.js" />
     <Content Include="favicon.ico" />
     <Content Include="gulpfile.js" />
     <Content Include="index.html" />
@@ -124,6 +143,11 @@
     <Content Include="protractor.conf.js" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="src\app.html" />
+    <Content Include="src\child-router.html" />
+    <Content Include="src\nav-bar.html" />
+    <Content Include="src\users.html" />
+    <Content Include="src\welcome.html" />
     <Content Include="wallaby.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -133,15 +157,32 @@
   <ItemGroup>
     <Folder Include="build\" />
     <Folder Include="custom_typings\" />
-    <Folder Include="src\" />
     <Folder Include="styles\" />
-    <Folder Include="test\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app.ts" />
+    <TypeScriptCompile Include="src\blur-image.ts" />
+    <TypeScriptCompile Include="src\child-router.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\users.ts" />
+    <TypeScriptCompile Include="src\welcome.ts" />
+    <TypeScriptCompile Include="test\e2e\src\demo.spec.ts" />
+    <TypeScriptCompile Include="test\e2e\src\skeleton.po.ts" />
+    <TypeScriptCompile Include="test\e2e\src\welcome.po.ts" />
+    <TypeScriptCompile Include="test\unit\app.spec.ts" />
+    <TypeScriptCompile Include="test\unit\child-router.spec.ts" />
+    <TypeScriptCompile Include="test\unit\setup.ts" />
+    <TypeScriptCompile Include="test\unit\users.spec.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>
