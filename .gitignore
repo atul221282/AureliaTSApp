@@ -243,3 +243,28 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/animator-css/
+/templating-router/
+/templating-resources/
+/templating-binding/
+/templating/
+/task-queue/
+/router/
+/route-recognizer/
+/polyfills/
+/path/
+/pal-browser/
+/pal/
+/metadata/
+/logging-console/
+/logging/
+/loader-default/
+/loader/
+/history-browser/
+/history/
+/framework/
+/fetch-client/
+/event-aggregator/
+/dependency-injection/
+/bootstrapper/
+/binding/

@@ -1,7 +1,10 @@
 ﻿@using AureliaTSApp.Models;
+@using AureliaTSApp.Helpers;
 
 @model LoginModel
 
 <template>
-    <h2>${userName}</h2>
+    <h2>
+        @Html.Label("${userName}")
+    </h2>
 </template>
