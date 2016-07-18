@@ -14,6 +14,17 @@ namespace AureliaTSApp
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
 
+            // routes.MapRoute(
+            //    name: "Template",
+            //    url: "dist/{feature}/{name}",
+            //    defaults: new { controller = "Template", action = "Render" }
+            //);
+
+            routes.MapRoute(
+                  name: "Template",
+                  url: "dist/{feature}/{name}.html",
+                  defaults: new { controller = "Template", action = "Render" }
+              );
 
             routes.MapRoute(
                 name: "Default",
@@ -26,6 +37,9 @@ namespace AureliaTSApp
                 url: "dist/{controller}/{action}/{id}",
                 defaults: new { action = "Index", id = UrlParameter.Optional }
             );
+
+
+
         }
     }
 }

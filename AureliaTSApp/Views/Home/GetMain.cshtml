@@ -2,9 +2,13 @@
 @using AureliaTSApp.Helpers;
 
 @model LoginModel
-
+@{
+    string useName = "${user." + Html.NameFor(x => x.UserName) + "}";
+    string userNameModel = "user." + Html.NameFor(x => x.UserName);
+}
 <template>
     <h2>
-        @Html.Label("${userName}")
+        <input type="text" value.bind="@userNameModel" />
+        @useName
     </h2>
 </template>

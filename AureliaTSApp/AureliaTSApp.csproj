@@ -141,21 +141,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="build\args.js" />
+    <Content Include="build\bundles.js" />
+    <Content Include="build\export.js" />
+    <Content Include="build\paths.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include=".editorconfig" />
     <Content Include=".npmignore" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <None Include="dist\login\login.cshtml" />
+    <Content Include="dist\web.config" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -184,6 +187,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\GetMain.cshtml" />
+    <Content Include="src\login\login-ss.html" />
+    <None Include="src\login\login.cshtml" />
+    <Content Include="src\web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -227,6 +233,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TemplateController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -236,7 +243,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="build\" />
+    <Folder Include="build\tasks\" />
     <Folder Include="custom_typings\" />
     <Folder Include="styles\" />
   </ItemGroup>
@@ -244,11 +251,18 @@
     <TypeScriptCompile Include="src\app.ts" />
     <TypeScriptCompile Include="src\blur-image.ts" />
     <TypeScriptCompile Include="src\child-router.ts" />
-    <TypeScriptCompile Include="src\event.ts" />
     <TypeScriptCompile Include="src\getmain.ts" />
+    <TypeScriptCompile Include="src\login\login.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\users.ts" />
     <TypeScriptCompile Include="src\welcome.ts" />
+    <TypeScriptCompile Include="test\e2e\src\demo.spec.ts" />
+    <TypeScriptCompile Include="test\e2e\src\skeleton.po.ts" />
+    <TypeScriptCompile Include="test\e2e\src\welcome.po.ts" />
+    <TypeScriptCompile Include="test\unit\app.spec.ts" />
+    <TypeScriptCompile Include="test\unit\child-router.spec.ts" />
+    <TypeScriptCompile Include="test\unit\setup.ts" />
+    <TypeScriptCompile Include="test\unit\users.spec.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
@@ -258,7 +272,6 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <!--<Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />-->
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>

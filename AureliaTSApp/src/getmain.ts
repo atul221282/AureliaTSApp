@@ -4,7 +4,7 @@ import {HttpClient, HttpClientConfiguration} from 'aurelia-fetch-client';
 
 @(autoinject)
 export class GetMain {
-    userName: string;
+    user: any;
     inlineViewStartegy: InlineViewStrategy;
     httpClient: HttpClient;
     constructor(private viewStrategy: InlineViewStrategy, private httpCl: HttpClient) {
@@ -13,11 +13,7 @@ export class GetMain {
     }
 
     activate(bindingContext: any) {
-        this.userName = bindingContext;
+        this.user = bindingContext;
     }
-
-    //getViewStrategy() {
-    //    return new InlineViewStrategy('<template>Hello</template>');
-    //}
-
+    
 }
