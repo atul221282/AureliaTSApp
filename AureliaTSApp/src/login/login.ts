@@ -24,7 +24,7 @@ export class Login {
     }
 
     getViewStrategy() {
-        return '/src/login/login';
+        return 'login/login';
     }
 
 }

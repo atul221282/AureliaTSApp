@@ -21,7 +21,7 @@ namespace AureliaTSApp
 
             routes.MapRoute(
                   name: "Template",
-                  url: "src/{feature}/{name}",
+                  url: "dist/{feature}/{name}",
                   defaults: new { controller = "Template", action = "Render" }
               );
 
