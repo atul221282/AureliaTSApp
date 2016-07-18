@@ -41,7 +41,6 @@ gulp.task('build-html', function() {
 gulp.task('build-cshtml', function () {
     return gulp.src(paths.cshtml)
       .pipe(changed(paths.output, { extension: '.cshtml' }))
-      .pipe(htmlmin({ collapseWhitespace: true }))
       .pipe(gulp.dest(paths.output));
 });
 

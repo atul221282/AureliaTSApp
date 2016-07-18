@@ -17,7 +17,7 @@
     <RootNamespace>AureliaTSApp</RootNamespace>
     <AssemblyName>AureliaTSApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -272,8 +272,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="dist\awsm-mvc\awsm-mvc.js" />
-    <Content Include="dist\login\login.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
@@ -283,11 +281,8 @@
     <Content Include="README.md" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
-    <Content Include="dist\awsm-mvc\awsm-mvc.cshtml" />
-    <Content Include="dist\awsm-mvc\awsm-mvc.js.map" />
-    <Content Include="dist\login\login.cshtml" />
-    <Content Include="dist\login\login.js.map" />
     <Content Include="ApplicationInsights.config" />
+    <Content Include="dist\login\login.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -301,12 +296,6 @@
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
     <Content Include="typings.json" />
-    <Content Include="dist\app.js.map" />
-    <Content Include="dist\blur-image.js.map" />
-    <Content Include="dist\child-router.js.map" />
-    <Content Include="dist\main.js.map" />
-    <Content Include="dist\users.js.map" />
-    <Content Include="dist\welcome.js.map" />
     <Content Include="Views\web.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -331,17 +320,6 @@
     <Content Include=".gitignore" />
     <Content Include="aurelia.protractor.js" />
     <Content Include="config.js" />
-    <Content Include="dist\app.html" />
-    <Content Include="dist\app.js" />
-    <Content Include="dist\blur-image.js" />
-    <Content Include="dist\child-router.html" />
-    <Content Include="dist\child-router.js" />
-    <Content Include="dist\main.js" />
-    <Content Include="dist\nav-bar.html" />
-    <Content Include="dist\users.html" />
-    <Content Include="dist\users.js" />
-    <Content Include="dist\welcome.html" />
-    <Content Include="dist\welcome.js" />
     <Content Include="favicon.ico" />
     <Content Include="gulpfile.js" />
     <Content Include="index.html" />
@@ -413,7 +391,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54170</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:54170/</IISUrl>
+          <IISUrl>http://localhost/AureliaTSApp</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

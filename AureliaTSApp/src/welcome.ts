@@ -26,7 +26,7 @@ export class Welcome {
         this.http.configure(config => {
             config
                 .useStandardConfiguration()
-                .withBaseUrl('http://localhost:54170/');
+                .withBaseUrl('http://localhost/AureliaTSApp/');
         });
 
         return this.http.fetch('Home/GetLoginModel')
