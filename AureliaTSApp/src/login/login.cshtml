@@ -7,7 +7,9 @@
     string userNameModel = "user." + Html.NameFor(x => x.UserName);
 }
 <template>
-    <h2>Login</h2>
-    <input type="text" value.bind="@userNameModel" />
-    @useName
+    <section class="au-animate">
+        <h2>Login</h2>
+        <input type="text" value.bind="@userNameModel" />
+        @useName
+    </section>
 </template>

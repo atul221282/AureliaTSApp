@@ -15,4 +15,8 @@ export class App {
 
         this.router = router;
     }
+
+    getViewStrategy() {
+        return 'app';
+    }
 }

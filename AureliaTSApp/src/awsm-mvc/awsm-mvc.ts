@@ -12,7 +12,7 @@ export class AwsmMvc {
     }
 
     activate() {
-       
+        return true;
     }
 
     getViewStrategy() {
