@@ -148,6 +148,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="dist\login-mvc\login.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
@@ -157,8 +158,7 @@
     <Content Include="README.md" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
-    <None Include="dist\login\login.cshtml" />
-    <Content Include="dist\web.config" />
+    <Content Include="dist\login-mvc\login.js.map" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -187,8 +187,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\GetMain.cshtml" />
-    <Content Include="src\login\login-ss.html" />
-    <None Include="src\login\login.cshtml" />
+    <Content Include="src\app.cshtml" />
+    <None Include="src\login-mvc\login.cshtml" />
     <Content Include="src\web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -252,7 +252,7 @@
     <TypeScriptCompile Include="src\blur-image.ts" />
     <TypeScriptCompile Include="src\child-router.ts" />
     <TypeScriptCompile Include="src\getmain.ts" />
-    <TypeScriptCompile Include="src\login\login.ts" />
+    <TypeScriptCompile Include="src\login-mvc\login.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\users.ts" />
     <TypeScriptCompile Include="src\welcome.ts" />

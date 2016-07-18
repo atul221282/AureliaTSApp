@@ -11,7 +11,7 @@ namespace AureliaTSApp.Controllers
     {
         public async Task<ActionResult> Render(string feature, string name)
         {
-            return PartialView(await Task.FromResult<string>($"~/dist/{feature}/{name}"));
+            return PartialView(await Task.FromResult<string>($"~/src/{feature}/{name}.cshtml"));
         }
     }
 }
