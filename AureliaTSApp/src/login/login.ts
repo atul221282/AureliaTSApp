@@ -23,4 +23,8 @@ export class Login {
                 .then(data => this.user = data);
     }
 
+    getViewStrategy() {
+        return '/src/login/login';
+    }
+
 }
