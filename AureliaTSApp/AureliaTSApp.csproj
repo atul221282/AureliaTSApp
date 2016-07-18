@@ -159,6 +159,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="dist\awsm-mvc\awsm-mvc.js" />
     <Content Include="dist\login\login.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -172,6 +173,8 @@
     <Content Include="dist\web.config" />
     <Content Include="dist\login\login.cshtml" />
     <Content Include="dist\login\login.js.map" />
+    <Content Include="dist\awsm-mvc\awsm-mvc.cshtml" />
+    <Content Include="dist\awsm-mvc\awsm-mvc.js.map" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
