@@ -24,6 +24,7 @@ namespace AureliaTSApp
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/jspm_packages/github/CodeSeven/toastr@2.1.2/build/toastr.css",
                       "~/Content/site.css"));
         }
     }

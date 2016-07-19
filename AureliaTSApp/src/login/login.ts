@@ -1,26 +1,32 @@
-﻿import {autoinject} from 'aurelia-framework';
+﻿import {Message} from "../common/message";
+import {autoinject} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-fetch-client';
+
 
 @autoinject()
 export class Login {
     name: string;
     http: HttpClient;
     user: any;
-
-    constructor(private httpClient: HttpClient) {
+    message: Message;
+    constructor(private httpClient: HttpClient, private msg: Message) {
+        this.message = msg;
         this.http = httpClient;
+
     }
 
     activate() {
-            this.http.configure(config => {
-                config
-                    .useStandardConfiguration()
-                    .withBaseUrl('http://localhost/AureliaTSApp/');
-            });
+        setTimeout(() => this.message.showInfoMessage("welcome to login", "Login"), 2000);
 
-            return this.http.fetch('Home/GetLoginModel')
-                .then(response => response.json())
-                .then(data => this.user = data);
+        this.http.configure(config => {
+            config
+                .useStandardConfiguration()
+                .withBaseUrl('http://localhost/AureliaTSApp/');
+        });
+
+        return this.http.fetch('Home/GetLoginModel')
+            .then(response => response.json())
+            .then(data => this.user = data);
     }
 
     getViewStrategy() {

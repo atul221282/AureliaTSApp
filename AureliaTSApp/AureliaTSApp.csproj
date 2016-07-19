@@ -351,6 +351,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="styles\" />
+    <Folder Include="test\e2e\dist\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="custom_typings\string.d.ts" />
@@ -364,9 +365,9 @@
     <TypeScriptCompile Include="src\users.ts" />
     <TypeScriptCompile Include="src\welcome.ts" />
     <Content Include="test\e2e\src\welcome.spec.js" />
-    <None Include="test\e2e\src\skeleton.po.ts.old" />
-    <None Include="test\e2e\src\welcome.po.ts.old" />
-    <None Include="test\e2e\src\welcome.ts.old" />
+    <TypeScriptCompile Include="test\e2e\src\demo.spec.ts" />
+    <TypeScriptCompile Include="test\e2e\src\skeleton.po.ts" />
+    <TypeScriptCompile Include="test\e2e\src\welcome.po.ts" />
     <TypeScriptCompile Include="test\unit\app.spec.ts" />
     <TypeScriptCompile Include="test\unit\child-router.spec.ts" />
     <TypeScriptCompile Include="test\unit\setup.ts" />
