@@ -10,7 +10,7 @@ namespace AureliaTSApp.Controllers
 {
     public class TemplateController : Controller
     {
-        [EnableCors("AlowAll"),HttpGet]
+        
         public async Task<ActionResult> Render(string feature, string name)
         {
             if (!string.IsNullOrEmpty(feature))

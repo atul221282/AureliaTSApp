@@ -347,7 +347,6 @@
     <Compile Include="Helpers\AureliaModelHelper.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -364,9 +363,10 @@
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\users.ts" />
     <TypeScriptCompile Include="src\welcome.ts" />
-    <TypeScriptCompile Include="test\e2e\src\demo.spec.ts" />
-    <TypeScriptCompile Include="test\e2e\src\skeleton.po.ts" />
-    <TypeScriptCompile Include="test\e2e\src\welcome.po.ts" />
+    <Content Include="test\e2e\src\welcome.spec.js" />
+    <None Include="test\e2e\src\skeleton.po.ts.old" />
+    <None Include="test\e2e\src\welcome.po.ts.old" />
+    <None Include="test\e2e\src\welcome.ts.old" />
     <TypeScriptCompile Include="test\unit\app.spec.ts" />
     <TypeScriptCompile Include="test\unit\child-router.spec.ts" />
     <TypeScriptCompile Include="test\unit\setup.ts" />
