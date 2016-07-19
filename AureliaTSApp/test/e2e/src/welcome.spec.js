@@ -1,13 +1,31 @@
-describe('angularjs homepage todo list', function () {
-    it('should add a todo', function () {
-        browser.get('http://localhost/AureliaTSApp');
+describe('aurelia homepage', function () {
+    let browserEl;
+    beforeEach(function () {
+        browserEl = browser.get('http://localhost/AureliaTSApp');
+    })
 
-        var getGreting = function () {
-            return element(by.tagName('h2')).getText();
-        };
+    it('should have proper header text set and username', function () {
+        browser.sleep(3000);
 
-        var pp = getGreting();
+        let ele = element(by.valueBind('user.UserName'));
+        expect(ele.getAttribute('value')).toBe('atul2212');//.toBeDefined();
 
-        expect(pp).toEqual('Welcome to the Aurelia Navigation App!22')
+        element(by.valueBind('user.UserName')).clear().sendKeys('Test user');
+        browser.sleep(3000);
+        expect(ele.getAttribute('value')).toBe('Test user');//.toBeDefined();
+
+        let list = element.all(by.css('.nav li'));
+        expect(list.count()).toBe(5);
+
+        expect(element(by.tagName('h2')).getText()).toBe('Welcome to the Aurelia Navigation App!');
+
     });
+
+    it('should navigate to login screen', function () {
+
+        let list = element.all(by.css('.nav li'));
+        let body = element(by.tagName('body'));
+       
+    });
+
 });
