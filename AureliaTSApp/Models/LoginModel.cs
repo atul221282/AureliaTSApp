@@ -12,5 +12,8 @@ namespace AureliaTSApp.Models
         public string UserName { get; set; }
         [Required, DataType(DataType.Password)]
         public string Password { get; set; }
+
+        [Required, DataType(DataType.DateTime)]
+        public DateTime DateOfBirth { get; set; }
     }
 }

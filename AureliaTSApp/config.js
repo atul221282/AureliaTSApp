@@ -33,6 +33,11 @@ System.config({
     "font-awesome": "npm:font-awesome@4.6.3",
     "jquery": "npm:jquery@2.2.4",
     "text": "github:systemjs/plugin-text@0.0.8",
+    "toastr": "github:CodeSeven/toastr@2.1.2",
+    "github:CodeSeven/toastr@2.1.2": {
+      "css": "github:systemjs/plugin-css@0.1.23",
+      "jquery": "github:components/jquery@3.1.0"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },

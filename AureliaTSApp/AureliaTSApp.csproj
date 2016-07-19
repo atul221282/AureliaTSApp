@@ -353,10 +353,13 @@
     <Folder Include="styles\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="custom_typings\jquery.d.ts" />
     <TypeScriptCompile Include="custom_typings\string.d.ts" />
+    <TypeScriptCompile Include="custom_typings\toastr.d.ts" />
     <TypeScriptCompile Include="src\app.ts" />
     <TypeScriptCompile Include="src\blur-image.ts" />
     <TypeScriptCompile Include="src\child-router.ts" />
+    <TypeScriptCompile Include="src\common\message.ts" />
     <TypeScriptCompile Include="src\getmain.ts" />
     <TypeScriptCompile Include="src\awsm-mvc\awsm-mvc.ts" />
     <TypeScriptCompile Include="src\login\login.ts" />
