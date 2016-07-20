@@ -282,7 +282,6 @@
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config" />
-    <Content Include="dist\login\login.cshtml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -329,9 +328,9 @@
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="src\child-router.html" />
-    <Content Include="src\nav-bar.html" />
-    <Content Include="src\users.html" />
-    <Content Include="src\welcome.html" />
+    <Content Include="src\nav-bar.cshtml" />
+    <Content Include="src\users.cshtml" />
+    <Content Include="src\welcome.cshtml" />
     <Content Include="wallaby.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -350,6 +349,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="dist\" />
     <Folder Include="styles\" />
     <Folder Include="test\e2e\dist\" />
   </ItemGroup>
@@ -362,6 +362,7 @@
     <TypeScriptCompile Include="src\awsm-mvc\awsm-mvc.ts" />
     <TypeScriptCompile Include="src\login\login.ts" />
     <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\nav-bar.ts" />
     <TypeScriptCompile Include="src\users.ts" />
     <TypeScriptCompile Include="src\welcome.ts" />
     <Content Include="test\e2e\src\welcome.spec.js" />

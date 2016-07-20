@@ -13,6 +13,7 @@ namespace AureliaTSApp
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            
             routes.MapRoute(
                   name: "Template",
                   url: "dist/{feature}/{name}",
