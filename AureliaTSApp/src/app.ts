@@ -1,6 +1,7 @@
-
 import {Router, RouterConfiguration} from 'aurelia-router';
+import {useView} from 'aurelia-framework';
 
+@useView('app')
 export class App {
     router: Router;
 
@@ -18,7 +19,4 @@ export class App {
         this.router = router;
     }
 
-    getViewStrategy() {
-        return 'app';
-    }
 }
