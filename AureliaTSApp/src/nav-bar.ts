@@ -1,4 +1,5 @@
-﻿import {bindable} from 'aurelia-framework';
+﻿import {bindable, useView} from 'aurelia-framework';
+@useView('nav-bar')
 export class NavBar {
     @bindable router;
 

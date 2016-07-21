@@ -10,14 +10,13 @@ namespace AureliaTSApp.Controllers
 {
     public class TemplateController : Controller
     {
-        
+
         public async Task<ActionResult> Render(string feature, string name)
         {
-            name = name.Replace(".js", "");
-            if (!string.IsNullOrEmpty(feature))
+            if (!string.IsNullOrEmpty(name))
                 return PartialView(await Task.FromResult<string>($"~/dist/{feature}/{name}.cshtml"));
             else
-                return PartialView(await Task.FromResult<string>($"~/dist/{name}.cshtml"));
+                return PartialView(await Task.FromResult<string>($"~/dist/{feature}.cshtml"));
         }
     }
 }
