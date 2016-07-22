@@ -1,7 +1,8 @@
-import {autoinject} from 'aurelia-framework';
+import {autoinject, useView} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-fetch-client';
 
 @autoinject()
+@useView('welcome')
 export class Welcome {
     heading = 'Welcome to the Aurelia Navigation App!';
     firstName = 'John';
@@ -33,13 +34,14 @@ export class Welcome {
             .then(response => response.json())
             .then(data => this.user = data);
     }
+
     submit() {
         this.previousValue = this.fullName;
         alert(`Welcome, ${this.fullName}!`);
     }
 
     canDeactivate() {
-        if (this.fullName !== this.previousValue) {
+        if (this.user.UserName !== "") {
             return confirm('Are you sure you want to leave?');
         }
     }

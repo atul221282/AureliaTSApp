@@ -24,6 +24,10 @@ interface ToastrOptions {
 	* Use the jQuery show/hide method of your choice. These default to fadeIn/fadeOut. The methods fadeIn/fadeOut, slideDown/slideUp, and show/hide are built into jQuery.
 	*/
     hideMethod?: string;
+    /**
+	* Use the jQuery show/hide method of your choice. These default to fadeIn/fadeOut. The methods fadeIn/fadeOut, slideDown/slideUp, and show/hide are built into jQuery.
+	*/
+    closeMethod?:string
 	/**
 	* Should a close button be shown
 	*/

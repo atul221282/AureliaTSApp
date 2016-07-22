@@ -16,14 +16,17 @@ export class Login {
     }
 
     activate() {
-        setTimeout(() => this.message.showInfoMessage("welcome to login", "Login"), 2000);
+        
+        setTimeout(
+            () => this.message.showInfoMessage("welcome to login", "Login"),
+            1000);
 
         this.http.configure(config => {
             config
                 .useStandardConfiguration()
                 .withBaseUrl('http://localhost/AureliaTSApp/');
         });
-
+        
         return this.http.fetch('Home/GetLoginModel')
             .then(response => response.json())
             .then(data => this.user = data);

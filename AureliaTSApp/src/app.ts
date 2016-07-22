@@ -1,5 +1,6 @@
+import {Message} from "./common/message";
 import {Router, RouterConfiguration} from 'aurelia-router';
-import {useView} from 'aurelia-framework';
+import {useView, inject} from 'aurelia-framework';
 
 @useView('app')
 export class App {
@@ -7,7 +8,7 @@ export class App {
 
     configureRouter(config: RouterConfiguration, router: Router) {
         config.title = 'Aurelia';
-        
+        config.addPipelineStep("modelbind", NavigationResult);
         config.map([
             { route: ['', 'welcome'], name: 'welcome', moduleId: 'welcome', nav: true, title: 'Welcome' },
             { route: 'users', name: 'users', moduleId: 'users', nav: true, title: 'Github Users' },
@@ -19,4 +20,25 @@ export class App {
         this.router = router;
     }
 
+
+}
+
+@inject(Message)
+class NavigationResult {
+    message: Message;
+    constructor(private msg: Message) {
+        this.message = msg;
+    }
+    run(navigationInstruction: any, next: any) {
+        return next().then(a => {
+
+            if (a.completed === false)
+                this.message.showErrorMessage(JSON.stringify(a), "Error");
+            else
+                this.message.showSuccessMessage(JSON.stringify(a), "Success");
+
+            return a;
+
+        });
+    }
 }

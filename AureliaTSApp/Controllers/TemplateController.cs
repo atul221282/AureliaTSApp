@@ -10,7 +10,7 @@ namespace AureliaTSApp.Controllers
 {
     public class TemplateController : Controller
     {
-
+        [AllowAnonymous]
         public async Task<ActionResult> Render(string feature, string name)
         {
             if (!string.IsNullOrEmpty(name))
