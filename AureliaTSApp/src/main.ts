@@ -1,7 +1,11 @@
 import 'bootstrap';
 import {Aurelia, ViewLocator, Origin} from 'aurelia-framework';
 import * as str from 'string';
+import {LogManager} from 'aurelia-framework';
+import {CustomLogAppender} from './custom-log-appender';
 
+LogManager.addAppender(new CustomLogAppender());
+LogManager.setLevel(LogManager.logLevel.debug);
 export function configure(aurelia: Aurelia) {
     aurelia.use
         .standardConfiguration()
@@ -15,9 +19,9 @@ export function configure(aurelia: Aurelia) {
 
     //ViewLocator.prototype.convertOriginToViewUrl = (origin: Origin) => {
     //    var moduleId = origin.moduleId;
-        
+
     //    var id = str(moduleId).endsWith('.js') || str(moduleId).endsWith('.ts') ? moduleId.substring(0, moduleId.length - 3) : moduleId;
-        
+
     //    return id;
     //}
 

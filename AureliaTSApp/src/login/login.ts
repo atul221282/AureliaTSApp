@@ -26,7 +26,7 @@ export class Login {
                 .useStandardConfiguration()
                 .withBaseUrl('http://localhost/AureliaTSApp/');
         });
-        
+
         return this.http.fetch('Home/GetLoginModel')
             .then(response => response.json())
             .then(data => this.user = data);

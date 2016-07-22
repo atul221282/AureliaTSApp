@@ -371,6 +371,7 @@
     <TypeScriptCompile Include="src\app.ts" />
     <TypeScriptCompile Include="src\blur-image.ts" />
     <TypeScriptCompile Include="src\child-router.ts" />
+    <TypeScriptCompile Include="src\custom-log-appender.ts" />
     <TypeScriptCompile Include="src\getmain.ts" />
     <TypeScriptCompile Include="src\awsm-mvc\awsm-mvc.ts" />
     <TypeScriptCompile Include="src\login\login.ts" />
