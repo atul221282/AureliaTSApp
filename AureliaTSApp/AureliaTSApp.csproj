@@ -368,11 +368,13 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="custom_typings\aurelia-dialog.d.ts" />
+    <None Include="custom_typings\es6-promise.d.ts.old" />
     <TypeScriptCompile Include="custom_typings\string.d.ts" />
     <TypeScriptCompile Include="src\app.ts" />
     <TypeScriptCompile Include="src\blur-image.ts" />
     <TypeScriptCompile Include="src\child-router.ts" />
     <TypeScriptCompile Include="src\common\delete-dialog.ts" />
+    <TypeScriptCompile Include="src\common\message.ts" />
     <TypeScriptCompile Include="src\custom-log-appender.ts" />
     <TypeScriptCompile Include="src\getmain.ts" />
     <TypeScriptCompile Include="src\awsm-mvc\awsm-mvc.ts" />

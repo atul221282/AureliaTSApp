@@ -32,13 +32,17 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.6",
     "fetch": "github:github/fetch@1.0.0",
     "font-awesome": "npm:font-awesome@4.6.3",
-    "jquery": "npm:jquery@2.2.4",
+    "jquery": "npm:jquery@3.1.0",
+    "jquery-ui": "github:components/jqueryui@1.12.0",
     "string": "npm:string@3.3.1",
     "text": "github:systemjs/plugin-text@0.0.8",
     "toastr": "github:CodeSeven/toastr@2.1.3",
     "github:CodeSeven/toastr@2.1.3": {
       "css": "github:systemjs/plugin-css@0.1.23",
       "jquery": "github:components/jquery@3.1.0"
+    },
+    "github:components/jqueryui@1.12.0": {
+      "jquery": "npm:jquery@3.1.0"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
@@ -205,6 +209,9 @@ System.config({
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:jquery@3.1.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:process@0.11.5": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",

@@ -1,6 +1,7 @@
-﻿import {inject} from "aurelia-framework";
+﻿import {inject, useView} from "aurelia-framework";
 import {DialogController} from "aurelia-dialog";
 
+@useView('common/delete-dialog')
 @inject(DialogController)
 export class DeleteDialog {
     contact: any;
@@ -10,10 +11,8 @@ export class DeleteDialog {
     }
 
     activate(contact) {
+        alert(JSON.stringify(contact));
         this.contact = contact;
-    }
-    getViewStrategy() {
-        return 'common/delete-dialog';
     }
 
 }
