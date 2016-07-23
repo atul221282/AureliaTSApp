@@ -6,6 +6,7 @@ import {CustomLogAppender} from './custom-log-appender';
 
 LogManager.addAppender(new CustomLogAppender());
 LogManager.setLevel(LogManager.logLevel.debug);
+
 export function configure(aurelia: Aurelia) {
     aurelia.use
         .standardConfiguration()
@@ -13,6 +14,7 @@ export function configure(aurelia: Aurelia) {
 
     //Uncomment the line below to enable animation.
     aurelia.use.plugin('aurelia-animator-css');
+    aurelia.use.plugin('aurelia-dialog');
 
     //Anyone wanting to use HTMLImports to load views, will need to install the following plugin.
     //aurelia.use.plugin('aurelia-html-import-template-loader')

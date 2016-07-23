@@ -321,6 +321,7 @@
     <Content Include="src\awsm-mvc\awsm-mvc.cshtml" />
     <Content Include="src\login\login.cshtml" />
     <Content Include="src\web.config" />
+    <Content Include="src\common\delete-dialog.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -362,15 +363,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="dist\" />
     <Folder Include="styles\" />
     <Folder Include="test\e2e\dist\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="custom_typings\aurelia-dialog.d.ts" />
     <TypeScriptCompile Include="custom_typings\string.d.ts" />
     <TypeScriptCompile Include="src\app.ts" />
     <TypeScriptCompile Include="src\blur-image.ts" />
     <TypeScriptCompile Include="src\child-router.ts" />
+    <TypeScriptCompile Include="src\common\delete-dialog.ts" />
     <TypeScriptCompile Include="src\custom-log-appender.ts" />
     <TypeScriptCompile Include="src\getmain.ts" />
     <TypeScriptCompile Include="src\awsm-mvc\awsm-mvc.ts" />

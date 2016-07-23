@@ -1,5 +1,6 @@
 ﻿export class CustomLogAppender {
-    constructor() { }
+    constructor() {
+    }
     debug(logger, message, rest) {
         console.debug(`DEBUG [${logger.id}] ${message}`, rest);
     }
@@ -10,6 +11,7 @@
         console.warn(`WARN [${logger.id}] ${message}`, rest);
     }
     error(logger, message, rest) {
+        alert("error");
         console.error(`ERROR [${logger.id}] ${message}`, rest);
     }
 }

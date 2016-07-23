@@ -1,17 +1,22 @@
 ﻿import {autoinject} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-fetch-client';
+import {DialogController} from "aurelia-dialog";
 
 @autoinject()
 export class AwsmMvc {
     name: string;
     http: HttpClient;
     user: any;
-
-    constructor(private httpClient: HttpClient) {
+    controller: DialogController;
+    constructor(private httpClient: HttpClient, private ctrl: DialogController) {
         this.http = httpClient;
+        this.controller = ctrl;
     }
 
-    activate() {
+    activate(bindingContext) {
+        if (bindingContext) {
+            this.user = bindingContext;
+        }
         return true;
     }
 
