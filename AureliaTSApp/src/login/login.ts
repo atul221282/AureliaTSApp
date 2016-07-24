@@ -4,6 +4,8 @@ import {HttpClient} from 'aurelia-fetch-client';
 import {AwsmMvc} from '../awsm-mvc/awsm-mvc';
 import {DialogService} from 'aurelia-dialog';
 import {DeleteDialog} from '../common/delete-dialog';
+import 'jquery';
+import 'jqueryui';
 
 @autoinject()
 export class Login {
@@ -21,7 +23,7 @@ export class Login {
     }
 
     activate() {
-
+        
         setTimeout(
             () => this.message.showInfoMessage("welcome to login", "Login"),
             1000);

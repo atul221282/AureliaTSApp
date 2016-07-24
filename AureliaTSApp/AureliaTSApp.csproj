@@ -369,6 +369,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="custom_typings\aurelia-dialog.d.ts" />
     <None Include="custom_typings\es6-promise.d.ts.old" />
+    <TypeScriptCompile Include="custom_typings\jqueryui.d.ts" />
     <TypeScriptCompile Include="custom_typings\string.d.ts" />
     <TypeScriptCompile Include="src\app.ts" />
     <TypeScriptCompile Include="src\blur-image.ts" />
