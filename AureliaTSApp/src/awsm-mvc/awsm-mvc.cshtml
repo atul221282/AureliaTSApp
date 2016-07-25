@@ -3,5 +3,9 @@
         @DateTime.Now
         <br />
         ${user.UserName}
+
+        <div repeat.for="li of list">
+            ${li.id}
+        </div>
     </section>
 </template>
